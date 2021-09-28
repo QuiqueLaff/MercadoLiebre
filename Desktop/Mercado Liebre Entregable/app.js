@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-app.use(express.static('public'));
+app.use(express.static(path.reolve(__dirname,'public')));
 
 
 
@@ -21,4 +21,4 @@ app.get('/login', (req,res)=>{
 });
 
 
-app.listen(3000 || process.env.PORT, ()=> console.log('Servidor funcionando en el 3000'));
+app.listen(process.env.PORT || 3000, ()=> console.log('Servidor funcionando en el 3000'));
